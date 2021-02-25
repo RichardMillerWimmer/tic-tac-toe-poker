@@ -13,6 +13,10 @@ function setCards() {
     card.style.color = colorInput.value
 };
 
-// function resetCards() {
-    
-// }
+function resetCards() {
+    const cardArr = document.querySelectorAll('section') 
+    cardArr.forEach(card => {
+        card.style.color = "grey"
+    })
+    // console.log(reset) 
+}
