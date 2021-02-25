@@ -1,6 +1,6 @@
 // console.log("test connect")
 
-const playHistory = []
+let playHistory = []
 
 function play(clickedId) {
     const currentPlayer = document.getElementById('player')
@@ -54,7 +54,7 @@ function play(clickedId) {
         }
 
         let fullBoard = true;
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i <= 8; i++) {
             if (playHistory[i] === undefined) {
                 fullBoard = false
             }
@@ -66,10 +66,15 @@ function play(clickedId) {
 
 function boardReset() {
     const tiles = document.querySelectorAll("td")
-    tiles.forEach(tile => {
-        tile.innerText = ""
+    tiles.forEach(elem => {
+        elem.innerText = ""
     })
-}
+    playHistory = []
+};
 
-
+// function boardReset() {
+//     playHistory.forEach((elem i) => {
+//         elem[i] = ''
+//     })
+// }
 
